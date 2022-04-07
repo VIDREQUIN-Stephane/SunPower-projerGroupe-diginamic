@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Page d'accueil de Sunpower, vous trouverez nos produits,
+      la carte interactive, plus d'informations nous concernant, un formulaire de contact et nos partenaires.">
+   <!--style de la map-->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
+   <link rel="stylesheet" href="../style/style.css">
+   <!-- bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <title>Accueil | Sunpower</title>
+</head>
+
+<body>
+   <!-- en-tête -->
+   <header role="heading" class="container-fluid navbar navbar-expand-md">
+
+      <div class="row justify-content-lg-around ms-lg-5">
+         <!-- logo sunpower -->
+         <div class="col-3">
+            <a href="#" class="navbar-brand">
+               <img src="../Assets/Logo.png" alt="Logo Sunpower" class="img-fluid mt-md-3 ms-md-3" id="logo">
+            </a>
+         </div>
+         <!-- titre sunpower -->
+         <div class="navbar-brand col-6">
+            <img src="../Assets/Sunpower.png" alt="Titre Sunpower" class="img-fluid offset-md-3" id="sunpower">
+            <h1 class="navbar-text text-center text-uppercase h6">L'énergie à portée de main</h1>
+         </div>
+         <!-- bouton burger responsive -->
+         <button type="button" class="navbar-toggler navbar-light bg-light" data-bs-toggle="collapse"
+            data-bs-target="#navbar-content">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <!-- barre de navigation -->
+         <nav class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
+               <li class="nav-item"><a href="#" class="nav-link">Nos produits</a></li>
+               <li class="nav-item"><a href="./carte.html" class="nav-link">Implantation</a></li>
+               <li class="nav-item"><a href="#" class="nav-link">A propos</a></li>
+               <li class="nav-item"><a href="#" class="nav-link">Partenaires</a></li>
+               <li class="nav-item"><a href="contact.html" class="nav-link">Contactez-nous</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+
+   <main class="container">
+
+      <!-- section de produits -->
+      <section class="row mt-5">
+         <H2 role="text">Nos produits</H2>
+         <hr />
+         <div class="row">
+            <img role="img" src="../Assets/Ombirère.png" alt="Ombrière" class="img-fluid rounded col-lg-6"
+               id="ombrière">
+            <p role="text" class="pt-3 col-lg-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Quibusdam,
+               ipsum
+               aliquid
+               perferendis
+               deserunt
+               aperiam sunt ut assumenda maxime ad, porro laboriosam suscipit cupiditate corporis a et quam ipsa dolore
+               dolor.</p>
+         </div>
+      </section>
+
+
+      <!-- section de la carte interactive -->
+      <section class="mt-5">
+         <H2 role="text">Notre implantation</H2>
+         <hr>
+         <div>
+            <a href="carte.html"><img role="img" src="../Assets/carte.png" alt="Carte interactive"
+                  class="img-fluid rounded"></a>
+            <p role="text" class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit maiores harum
+               pariatur labore
+               sed
+               cupiditate
+               atque. Voluptatem porro provident consequuntur, rerum vero facere autem quaerat soluta aperiam magni
+               dolores
+               esse.</p>
+         </div>
+      </section>
+
+
+      <!-- section à propos -->
+      <section class="container mt-5">
+         <h2 role="img">A propos de nous</h2>
+         <hr>
+         <div class="row justify-content-around">
+            <div class="col-3 align-self-center">
+               <img role="img" src="../Assets/Einstein.png" alt="Pareneinstein" class="img-fluid rounded">
+            </div>
+            <div class="col-3 align-self-lg-center ps-lg-5">
+               <img role="img" src="../Assets/Oppenheimer.png" alt="Oppenheimer" class="img-fluid rounded">
+            </div>
+            <div class="col-3">
+               <img role="img" src="../Assets/Turing.png" alt="Turing" class="img-fluid rounded">
+            </div>
+            <p role="text" class="pt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique repellendus
+               harum nostrum
+               provident vel
+               aut, quo delectus cumque aperiam cupiditate dolorem vitae esse placeat ea dicta blanditiis facere
+               expedita
+               nemo.</p>
+         </div>
+      </section>
+
+
+      <!-- section de formulaire de contact -->
+      <section class="mt-5">
+         <h2 role="text">Contact</h2>
+         <hr>
+
+         <h3 class="h4">Pour prendre contact</h3>
+         <form role="form" aria-label="formulaire de contact" action="notresiteweb@sunpower.fr" method="get">
+            <div class="container flex-column">
+
+               <!-- champs nom/prénom -->
+               <h5 class="mt-3">Vous êtes :</h5>
+               <div class="container d-md-flex">
+                  <div class="my-2 col-md-5">
+                     <label aria-label="nom" for="surname">NOM :
+                        <input type="text" name="surname" id="surname" required />
+                     </label>
+                  </div>
+                  <div class="my-2 col-md-5">
+                     <label aria-label="Prénom" for="name">Prénom :
+                        <input type="text" name="name" id="name" required />
+                     </label>
+                  </div>
+               </div>
+
+               <!-- Champs statut -->
+               <div class="container">
+                  <h5 class="mt-4">Votre statut :</h5>
+                  <label class="row justify-content-center">
+                     <div class="col-6">
+                        <input type="radio" name="statut" id="collectivite" value="collectivite" checked>
+                        <label for="collectivite">Une collectivité</label>
+                     </div>
+                     <div class="col-6">
+                        <input type="radio" name="statut" id="entreprise" value="entreprise">
+                        <label for="entreprise">Une entreprise</label>
+                     </div>
+                     <div class="col-6">
+                        <input type="radio" name="statut" id="syndic" value="syndic">
+                        <label for="syndic">Un syndic</label>
+                     </div>
+                     <div class="col-6">
+                        <input type="radio" name="statut" id="particulier" value="particulier">
+                        <label for="particulier">Un particulier</label>
+                     </div>
+                  </label>
+               </div>
+               <hr>
+
+               <!-- Champ de coordonnées -->
+
+               <h5 class="pt-1">Pour vous joindre :</h5>
+
+               <div class="container d-md-flex mb-5">
+                  <div class="my-2 col-md-6">
+                     <label for="phone">Tél. :
+                        <input type="tel" name="numStandard" id="phone"
+                           pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="00-00-00-00-00"
+                           required />
+                     </label>
+                  </div>
+                  <div class="my-2 col-md-6">
+                     <label for="mail">e-mail :
+                        <input type="email" id="mail" pattern=".+@globex\.com" placeholder="@dresse mail" required />
+                     </label>
+                  </div>
+               </div>
+
+               <!-- placement des boutons -->
+               <div class="flex-column d-md-flex flex-md-row-reverse">
+                  <div class="my-2 col-md-5">
+                     <button type="submit" class="btn btn-success" id="send">Envoyer</button>
+                  </div>
+                  <div class="my-2 col-md-5">
+                     <a href="./contact.html" class="badge bg-success text-decoration-none p-3"
+                        id="contact-redirection">Je choisis le
+                        formulaire complet</a>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </section>
+
+
+      <!-- section de nos partenaires -->
+      <section class="mt-5">
+         <H2 role="text">Nos partenaires</H2>
+         <hr>
+         <div class="row pt-md-3">
+            <div class="col-md-3 ms-0 col-4 d-md-flex justify-content-md-end">
+               <img src="../Assets/Ademe.png" alt="logo Ademe" class="img-fluid" id="ademe">
+            </div>
+            <h3 class="h5 col-8 align-self-center d-md-none">Agence de la transition écologique</h3>
+            <div class="flex-md-column col-md-8">
+               <h3 class="h5 d-none d-md-flex col-md-8">Agence de la transition écologique</h3>
+               <p role="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+                  voluptatem
+                  blanditiis!
+                  Necessitatibus deleniti
+                  veniam rerum dicta! Voluptates exercitationem perferendis quam praesentium dolores accusamus vero,
+                  esse
+                  magnam
+                  velit! Voluptas, dicta illo.</p>
+            </div>
+         </div>
+      </section>
+   </main>
+
+
+   <!-- Pied de page -->
+   <footer class="container-fluid border-top border-success mt-5">
+      <div class="row text-center my-md-3">
+         <p class="col-4">Copyright 2022
+            &copy;
+         </p>
+         <p class="col-4">Sunpower</p>
+         <p class="col-4">Projet 1</p>
+      </div>
+      <div class="row ms-5 ms-md-0">
+         <div class="d-md-flex col-6 col-md-3 justify-content-md-center pb-3 pb-md-0">
+            <img src="../Assets/montpellier.png" alt="Montpellier" class="img-fluid" id="montpellier">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center pb-3 pb-md-0">
+            <img src="../Assets/Herault.png" alt="Département Hérault" class="img-fluid" id="herault">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+            <img src="../Assets/occitanie.png" alt="Région Occitanie" class="img-fluid" id="occitanie">
+         </div>
+         <div class="col-6 col-md-3 d-md-flex justify-content-md-center">
+            <img src="../Assets/toulouse.png" alt="Toulouse" class="img-fluid w-auto" id="toulouse">
+         </div>
+      </div>
+      <hr>
+      <p>Farah - Stéphane - Charles</p>
+   </footer>
+
+</body>
+
+</html>
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
